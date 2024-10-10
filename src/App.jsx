@@ -8,6 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 
 function App() {
+  // microCMS用配列
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {

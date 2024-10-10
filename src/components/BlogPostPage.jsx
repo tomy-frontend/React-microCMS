@@ -32,7 +32,7 @@ const BlogPostPage = () => {
   if (isLoading)
     return (
       <div className="grid place-content-center w-screen h-screen">
-        Loading...
+        Now Loading...
       </div>
     );
   if (error) return <div>{error}</div>;
