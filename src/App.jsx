@@ -30,7 +30,7 @@ function App() {
               <Header />
               <main>
                 <section className="mt-10 px-4 container mx-auto md:px-8">
-                  <h2 className="text-4xl font-extrabold">BLOG</h2>
+                  <h2 className="text-4xl font-extrabold">- BLOG -</h2>
                   <div className="container mx-auto gap-x-3 gap-y-6 grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3">
                     {blogPosts.map((post) => (
                       <article key={post.id} className="group contents">
