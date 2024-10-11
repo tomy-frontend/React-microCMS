@@ -70,8 +70,11 @@ function App() {
           }
         />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        {/* 個別ブログのパスを定義、呼び出すのはBlogPostPageコンポーネント */}
         <Route path="/about" element={<About />} />
+        {/* aboutのパスを定義、呼び出すのはAboutコンポーネント */}
         <Route path="/contact" element={<Contact />} />
+        {/* contactコンポーネントを定義、呼び出すのはContactコンポーネント */}
       </Routes>
     </Router>
   );
