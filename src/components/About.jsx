@@ -18,18 +18,22 @@ const About = () => {
 
   // calculateTotalの計算関数
   const calculateTotal = () => {
+    // 変数calculateTotalを定義、最初は0
     let calculateTotal = 0;
 
+    // projectTypeがLPかmultiPageかで金額を判断する
     if (projectType === "LP") {
       calculateTotal += 70000;
     } else if (projectType === "multiPage") {
       calculateTotal += 100000;
     }
 
+    // pageCount等の数 * 金額
     calculateTotal += pageCount * 20000;
     calculateTotal += cmsCount * 10000;
     calculateTotal += contactForms * 10000;
 
+    // もしisPriorityにチェックが入っていればcalculateTotalに20000プラスする
     if (isPriority) {
       calculateTotal += 20000;
     }
@@ -50,22 +54,28 @@ const About = () => {
           </h2>
           <h3 className="mt-4 text-2xl font-medium">制作種類</h3>
           <div className="flex items-center gap-4">
-            <label className="font-medium flex items-center gap-1" htmlFor="">
+            <label
+              className="font-medium flex items-center gap-1"
+              htmlFor="projectTypeLP"
+            >
               <input
                 type="radio"
-                name=""
-                id=""
+                name="projectType"
+                id="projectTypeLP"
                 value="LP"
                 checked={projectType === "LP"}
                 onChange={(e) => setProjectType(e.target.value)}
               />
               LP(70,000円)
             </label>
-            <label className="font-medium flex items-center gap-1" htmlFor="">
+            <label
+              className="font-medium flex items-center gap-1"
+              htmlFor="projectTypeMultiPage"
+            >
               <input
                 type="radio"
-                name=""
-                id=""
+                name="projectType"
+                id="projectTypeMultiPage"
                 value="multiPage"
                 checked={projectType === "multiPage"}
                 onChange={(e) => setProjectType(e.target.value)}
@@ -109,15 +119,15 @@ const About = () => {
 
           <h3 className="mt-4 text-2xl font-medium">優先(急ぎ)対応</h3>
           <div className="flex items-center gap-4">
-            <label className="font-medium flex gap-1" htmlFor="">
+            <label className="font-medium flex gap-1" htmlFor="priority">
               <input
                 type="checkbox"
-                name=""
-                id=""
+                name="priority"
+                id="priority"
                 checked={isPriority}
                 onChange={(e) => setIsPriority(e.target.checked)}
               />
-              あり(20,000円)
+              あり
             </label>
           </div>
 
