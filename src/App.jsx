@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 
 function App() {
   // microCMS用配列,useStateに空の配列を持たせる,blogPostsは最初は空っぽ。setBlogPostsがblogPostsを更新するための鍵
-  // これはuseStateで状態を管理する、初期は空配列
+  // これはuseStateで状態を管理する、初期は空配列、指定しないとエラー
   const [blogPosts, setBlogPosts] = useState([]);
 
   // コンポーネントがレンダリングされた時に実行される処理
@@ -17,12 +17,14 @@ function App() {
     // fetchBlogPosts関数を定義、(async)非同期で実行、
     const fetchBlogPosts = async () => {
       const apiResponse = await client.getList({ endpoint: "blogs" });
+
+      // setBlogPostsを更新するための関数、apiResponseで取得したブログの内容を更新する。contentsはmicroCMSで用意されたデータの配列
       setBlogPosts(apiResponse.contents);
     };
 
     // fetchBlogPosts関数を呼び出すのは最初にレンダリングされた時だけ、第二引数で[]を渡すことで呼び出し回数を絞っている
     fetchBlogPosts();
-    // 空の配列を渡すことで、発火タイミングを、コンポーネントが最初にマウントされた時だけにする。
+    // 空の配列を渡すことで、発火タイミングを、コンポーネントが最初にマウントされた時だけにする。これがないとブログ更新されるたびにレンダリングされるのでパフォーマンス良くない
   }, []);
 
   return (
