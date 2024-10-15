@@ -15,7 +15,7 @@ const About = () => {
     // 変数calculateTotalを定義、最初は0
     let calculatedTotal = 0;
 
-    // projectTypeがLPかmultiPageかで金額を判断する
+    // projectTypeが"LP"か"multiPage"かで金額を判断する。
     if (projectType === "LP") {
       calculatedTotal += 70000;
     } else if (projectType === "multiPage") {
@@ -50,12 +50,11 @@ const About = () => {
       <main>
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-3xl font-bold mb-4">About Me</h1>
-          <p className="mb-4">aboutページです</p>
           <hr />
           <h2 className="pt-4 font-bold text-xl md:text-3xl">
             お見積もり金額シュミレーター
           </h2>
-          <div className="md:flex">
+          <div className="mt-6 md:flex">
             <div className="md:w-3/5 bg-gray-200 px-3 py-4">
               <h3 className="text-2xl font-medium">制作種類</h3>
               <div className="mt-2 flex items-center gap-4">
