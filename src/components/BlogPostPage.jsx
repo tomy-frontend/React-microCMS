@@ -42,7 +42,7 @@ const BlogPostPage = () => {
     <>
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <article className="max-w-3xl mx-auto">
+        <article className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
           <div
             className="prose lg:prose-xl"
