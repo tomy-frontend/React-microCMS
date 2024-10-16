@@ -151,6 +151,7 @@ const About = () => {
             </div>
             <div className="grid place-content-center bg-gray-100 md:flex-1 py-6">
               <p className="text-3xl font-medium text-center">
+                {/* toLocalStringによって現地の通貨単位に合わせる。40,000円とかの,をつけてくれる */}
                 合計金額:{total.toLocaleString()}円
               </p>
             </div>
