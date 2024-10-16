@@ -101,7 +101,7 @@ const contact = () => {
                     },
                   })}
                   aria-invalid={errors.password ? "true" : "false"}
-                  className="mt-1 bg-gray-200 rounded-lg p-2 w-full"
+                  className="mt-1 bg-gray-200 rounded-lg p-2 pr-11 w-full"
                   id="password"
                   type={showPassword ? "text" : "password"}
                 />
@@ -111,7 +111,7 @@ const contact = () => {
                     showPassword ? "パスワードを隠す" : "パスワードを表示する"
                   }
                   onClick={togglePasswordVisibility}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                  className="absolute inset-y-0 top-1 right-0 px-3 flex items-center text-sm leading-5"
                 >
                   {showPassword ? (
                     <EyeOff className="h-5 w-5 text-gray-500" />
