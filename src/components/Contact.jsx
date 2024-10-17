@@ -139,7 +139,7 @@ const contact = () => {
               ></textarea>
 
               <button
-                className="mt-3 bg-blue-600 text-white duration-300 font-bold rounded-lg p-4 hover:bg-blue-500"
+                className="mt-3 tracking-widest bg-blue-600 text-white duration-300 font-bold rounded-lg p-4 hover:bg-blue-500"
                 type="submit"
               >
                 送信
