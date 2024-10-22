@@ -49,14 +49,12 @@ const About = () => {
       <Header />
       <main>
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-4">About Me</h1>
-          <hr />
-          <h2 className="pt-4 font-bold text-xl md:text-3xl">
+          <h1 className="pt-4 font-bold text-xl md:text-3xl">
             お見積もり金額シュミレーター
-          </h2>
+          </h1>
           <div className="mt-6 md:flex">
             <div className="md:w-3/5 bg-gray-200 px-3 py-4">
-              <h3 className="text-2xl font-medium">制作種類</h3>
+              <h2 className="text-2xl font-medium">制作種類</h2>
               <div className="mt-2 flex items-center gap-4">
                 <label
                   className="font-medium flex items-center gap-1"
@@ -91,7 +89,7 @@ const About = () => {
               {/* 条件付きレンダリング、projectTypeが"multiPage"と一致している場合のみ下記表示する */}
               {projectType === "multiPage" && (
                 <>
-                  <h3 className="mt-4 text-2xl font-medium">下層ページ数</h3>
+                  <h2 className="mt-4 text-2xl font-medium">下層ページ数</h2>
                   <div className="mt-2 flex items-center gap-4">
                     <input
                       className="p-3 bg-white rounded-xl"
@@ -103,7 +101,7 @@ const About = () => {
                       }
                     />
                   </div>
-                  <h3 className="mt-4 text-2xl font-medium">投稿機能(CMS)数</h3>
+                  <h2 className="mt-4 text-2xl font-medium">投稿機能(CMS)数</h2>
                   <div className="mt-2 flex items-center gap-4">
                     <input
                       className="p-3 bg-white rounded-xl"
@@ -118,9 +116,9 @@ const About = () => {
                 </>
               )}
 
-              <h3 className="mt-4 text-2xl font-medium">
+              <h2 className="mt-4 text-2xl font-medium">
                 コンタクトフォームの数
-              </h3>
+              </h2>
               <div className="flex items-center gap-4">
                 <input
                   className="mt-2 p-3 bg-white rounded-xl"
@@ -132,7 +130,7 @@ const About = () => {
                   }
                 />
               </div>
-              <h3 className="mt-4 text-2xl font-medium">優先(急ぎ)対応</h3>
+              <h2 className="mt-4 text-2xl font-medium">優先(急ぎ)対応</h2>
               <div className="flex items-center gap-4">
                 <label
                   className="mt-2 font-medium flex gap-1"
