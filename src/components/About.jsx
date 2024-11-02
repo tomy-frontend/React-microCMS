@@ -168,11 +168,9 @@ const About = () => {
               <p className="text-xl font-medium text-center">
                 {workHoursPerDay ? (
                   <>
-                    (
                     <span className="text-2xl">
                       約{Math.round(totalHours / workHoursPerDay)}日
                     </span>
-                    )
                   </>
                 ) : null}
                 <select
