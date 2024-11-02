@@ -9,8 +9,7 @@ const About = () => {
   const [contactForms, setContactForms] = useState(0);
   const [isPriority, setIsPriority] = useState(false);
   const [total, setTotal] = useState(0);
-
-  // 作業合計時間
+  const [workHoursPerDay, setWorkHoursPerDay] = useState(8); // Add state for work hours per day
   const [totalHours, setTotalHours] = useState(0);
 
   // calculateTotalの計算関数
@@ -65,7 +64,7 @@ const About = () => {
       <main>
         <div className="container mx-auto px-4 py-8">
           <h1 className="pt-4 font-bold text-xl md:text-3xl">
-            お見積もり金額シュミレーター
+            ざっくりお見積もり金額シュミレーター
           </h1>
           <div className="mt-6 md:flex mx-auto max-w-4xl">
             <div className="md:w-3/6  bg-gray-200 px-3 py-4 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg">
@@ -167,9 +166,35 @@ const About = () => {
                 合計時間：約{Math.round(totalHours)}時間
               </p>
               <p className="text-xl font-medium text-center">
-                (約
-                {Math.round(totalHours / 8)}日) ※8時間/日 の場合
+                {workHoursPerDay ? (
+                  <>
+                    (
+                    <span className="text-2xl">
+                      約{Math.round(totalHours / workHoursPerDay)}日
+                    </span>
+                    )
+                  </>
+                ) : null}
+                <select
+                  value={workHoursPerDay}
+                  onChange={(e) => setWorkHoursPerDay(parseInt(e.target.value))}
+                  className="ml-1 text-lg rounded-md"
+                >
+                  <option value="8">8時間/日</option>
+                  <option value="10">10時間/日</option>
+                  <option value="12">12時間/日</option>
+                  <option value="14">14時間/日</option>
+                  <option value="16">16時間/日</option>
+                </select>
+                <span className="ml-1 text-2xl font-medium text-center">
+                  {workHoursPerDay >= 16 && "😇"}
+                  {workHoursPerDay >= 14 && workHoursPerDay < 16 && "🤯"}
+                  {workHoursPerDay >= 12 && workHoursPerDay < 14 && "🤔"}
+                  {workHoursPerDay >= 10 && workHoursPerDay < 12 && "😉"}
+                  {workHoursPerDay >= 8 && workHoursPerDay < 10 && "🥰"}
+                </span>
               </p>
+
               <p className="mt-3 text-3xl font-medium text-center">
                 {/* toLocalStringによって現地の通貨単位に合わせる。40,000円とかの,をつけてくれる */}
                 合計金額：{total.toLocaleString()}円
