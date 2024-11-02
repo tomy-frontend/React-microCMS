@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import Footer from "./Footer";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const About = () => {
   const [projectType, setProjectType] = useState("");
@@ -10,31 +10,46 @@ const About = () => {
   const [isPriority, setIsPriority] = useState(false);
   const [total, setTotal] = useState(0);
 
+  // 作業合計時間
+  const [totalHours, setTotalHours] = useState(0);
+
   // calculateTotalの計算関数
   const calculateTotal = useCallback(() => {
     // 変数calculateTotalを定義、最初は0
     let calculatedTotal = 0;
+    // 作業時間計算用の変数
+    let calculatedHours = 0;
 
     // projectTypeが"LP"か"multiPage"かで金額を判断する。
     if (projectType === "LP") {
       calculatedTotal += 70000;
+      calculatedHours += 32; // LP制作の基本時間
     } else if (projectType === "multiPage") {
       // pageCount等の数 * 金額の計算
       calculatedTotal += 100000;
+      calculatedHours += 60; // 複数ページの基本時間
+
       calculatedTotal += pageCount * 20000;
+      calculatedHours += pageCount * 8; // 1ページあたり8時間
+
       calculatedTotal += cmsCount * 10000;
+      calculatedHours += cmsCount * 2; // 1CMS機能あたり2時間
     }
 
     // contactFormsの数 * 金額
     calculatedTotal += contactForms * 10000;
+    calculatedHours += contactForms * 3; // 1フォームあたり3時間
 
     // もしisPriorityにチェックが入っていればcalculateTotalに20000プラスする
     if (isPriority) {
       calculatedTotal += 20000;
+      // 優先対応の場合は作業時間が20%短縮
+      calculatedHours = Math.ceil(calculatedHours * 0.8);
     }
 
-    // setTotalの値を更新する処理
+    // setTotalとsetTotalHoursの値を更新する処理
     setTotal(calculatedTotal);
+    setTotalHours(calculatedHours);
     // useCallbackの発火タイミングは、projectType...等の関数が更新されたとき
   }, [projectType, pageCount, cmsCount, contactForms, isPriority]);
 
@@ -52,8 +67,8 @@ const About = () => {
           <h1 className="pt-4 font-bold text-xl md:text-3xl">
             お見積もり金額シュミレーター
           </h1>
-          <div className="mt-6 md:flex">
-            <div className="md:w-3/5 bg-gray-200 px-3 py-4">
+          <div className="mt-6 md:flex mx-auto max-w-4xl">
+            <div className="md:w-3/6  bg-gray-200 px-3 py-4 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg">
               <h2 className="text-2xl font-medium">制作種類</h2>
               <div className="mt-2 flex items-center gap-4">
                 <label
@@ -147,10 +162,17 @@ const About = () => {
                 </label>
               </div>
             </div>
-            <div className="grid place-content-center bg-gray-100 md:flex-1 py-6">
+            <div className="grid place-content-center bg-gray-100 md:flex-1 py-6 rounded-bl-lg rounded-br-lg md:rounded-bl-none md:rounded-tr-lg">
               <p className="text-3xl font-medium text-center">
+                合計時間：約{Math.round(totalHours)}時間
+              </p>
+              <p className="text-xl font-medium text-center">
+                (約
+                {Math.round(totalHours / 8)}日) ※8時間/日 の場合
+              </p>
+              <p className="mt-3 text-3xl font-medium text-center">
                 {/* toLocalStringによって現地の通貨単位に合わせる。40,000円とかの,をつけてくれる */}
-                合計金額:{total.toLocaleString()}円
+                合計金額：{total.toLocaleString()}円
               </p>
             </div>
           </div>
