@@ -178,11 +178,11 @@ const About = () => {
                   onChange={(e) => setWorkHoursPerDay(parseInt(e.target.value))}
                   className="ml-1 text-lg rounded-md"
                 >
-                  <option value="8">8時間/日</option>
-                  <option value="10">10時間/日</option>
-                  <option value="12">12時間/日</option>
-                  <option value="14">14時間/日</option>
-                  <option value="16">16時間/日</option>
+                  <option value="8">8時間 /日</option>
+                  <option value="10">10時間 /日</option>
+                  <option value="12">12時間 /日</option>
+                  <option value="14">14時間 /日</option>
+                  <option value="16">16時間 /日</option>
                 </select>
                 <span className="ml-1 text-2xl font-medium text-center">
                   {workHoursPerDay >= 16 && "😇"}
