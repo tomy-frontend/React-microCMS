@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      {" "}
       <footer className="mt-4 bg-gray-300 text-gray-900 py-4 text-center">
         <nav className="container mx-auto">
           <ul className="flex flex-col container gap-4">
