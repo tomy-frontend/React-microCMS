@@ -194,7 +194,6 @@ const About = () => {
               </p>
 
               <p className="mt-3 text-3xl font-medium text-center">
-                {/* toLocalStringによって現地の通貨単位に合わせる。40,000円とかの,をつけてくれる */}
                 合計金額：{total.toLocaleString()}円
               </p>
             </div>
