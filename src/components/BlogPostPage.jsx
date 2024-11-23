@@ -36,7 +36,7 @@ const BlogPostPage = () => {
       </div>
     );
   if (error) return <div>{error}</div>;
-  if (!post) return <div>Blog post not found</div>;
+  if (!post) return <div>Blog post not found.</div>;
 
   return (
     <>
