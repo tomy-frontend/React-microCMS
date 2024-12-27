@@ -9,9 +9,14 @@ const contact = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
 
   console.log(watch("example"));
 
@@ -48,6 +53,7 @@ const contact = () => {
                 className="mt-1 bg-gray-200 rounded-lg p-2 w-full"
                 id="name"
                 type="text"
+                name="name"
               />
               {errors.name && (
                 <span className="mt-1 text-red-500 text-sm">
