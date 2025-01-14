@@ -14,9 +14,7 @@ const About = () => {
 
   // calculateTotalの計算関数
   const calculateTotal = useCallback(() => {
-    // 変数calculateTotalを定義、最初は0
     let calculatedTotal = 0;
-    // 作業時間計算用の変数
     let calculatedHours = 0;
 
     // projectTypeが"LP"か"multiPage"かで金額を判断する。
