@@ -11,7 +11,6 @@ function App() {
   // microCMS用配列,useStateに空の配列を持たせる,blogPostsは最初は空っぽ。setBlogPostsがblogPostsを更新するための鍵
   const [blogPosts, setBlogPosts] = useState([]);
 
-  // コンポーネントがレンダリングされた時に実行される処理
   useEffect(() => {
     // fetchBlogPosts関数を定義、(async)非同期で実行、
     const fetchBlogPosts = async () => {
