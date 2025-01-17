@@ -34,8 +34,7 @@ const contact = () => {
           <div className="container max-w-xl mx-auto">
             <h1 className="text-3xl font-semibold text-center">お問い合わせ</h1>
             <p className="mt-2 text-center">
-              このフォームはReact Hook
-              Formで作成しました。(バックエンドはまだ作成していないため送信はできません)
+              このフォームはReactHookFormで作成しました。(バックエンドはまだ作成していないため送信はできません)
             </p>
             {/* React Hook Form */}
             <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
