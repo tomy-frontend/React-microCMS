@@ -9,7 +9,6 @@ import Contact from "./components/Contact";
 
 function App() {
   // microCMS用配列,useStateに空の配列を持たせる,blogPostsは最初は空っぽ。setBlogPostsがblogPostsを更新するための鍵
-  // これはuseStateで状態を管理する、初期は空配列、指定しないとエラー
   const [blogPosts, setBlogPosts] = useState([]);
 
   // コンポーネントがレンダリングされた時に実行される処理
