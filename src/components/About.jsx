@@ -17,7 +17,6 @@ const About = () => {
     let calculatedTotal = 0;
     let calculatedHours = 0;
 
-    // projectTypeが"LP"か"multiPage"かで金額を判断する。
     if (projectType === "LP") {
       calculatedTotal += 70000;
       calculatedHours += 32; // LP制作の基本時間
