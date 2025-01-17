@@ -12,7 +12,6 @@ function App() {
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
-    // fetchBlogPosts関数を定義、(async)非同期で実行、
     const fetchBlogPosts = async () => {
       const apiResponse = await client.getList({ endpoint: "blogs" });
 
