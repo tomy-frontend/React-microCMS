@@ -8,7 +8,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 
 function App() {
-  // microCMS用配列,useStateに空の配列を持たせる,blogPostsは最初は空っぽ。setBlogPostsがblogPostsを更新するための鍵
   const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
