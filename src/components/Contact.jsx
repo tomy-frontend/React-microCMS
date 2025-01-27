@@ -36,7 +36,7 @@ const contact = () => {
             <p className="mt-2 text-center">
               このフォームはReactHookFormで作成しました。(バックエンドはまだ作成していないため送信はできません)
             </p>
-            {/* React Hook Form */}
+
             <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
               <label className="mt-3" htmlFor="name">
                 名前
