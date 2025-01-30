@@ -23,10 +23,10 @@ const About = () => {
     } else if (projectType === "multiPage") {
       // pageCount等の数 * 金額の計算
       calculatedTotal += 100000;
-      calculatedHours += 40; // 複数ページの基本時間
+      calculatedHours += 40;
 
       calculatedTotal += pageCount * 20000;
-      calculatedHours += pageCount * 8; // 1ページあたり8時間
+      calculatedHours += pageCount * 6; // 1ページあたり6時間
 
       calculatedTotal += cmsCount * 10000;
       calculatedHours += cmsCount * 2; // 1CMS機能あたり2時間
