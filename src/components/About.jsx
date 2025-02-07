@@ -9,7 +9,7 @@ const About = () => {
   const [contactForms, setContactForms] = useState(0);
   const [isPriority, setIsPriority] = useState(false);
   const [total, setTotal] = useState(0);
-  const [workHoursPerDay, setWorkHoursPerDay] = useState(8); // Add state for work hours per day
+  const [workHoursPerDay, setWorkHoursPerDay] = useState(8);
   const [totalHours, setTotalHours] = useState(0);
 
   // calculateTotalの計算関数
