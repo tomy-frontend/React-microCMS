@@ -141,7 +141,7 @@ const About = () => {
                   }
                 />
               </div>
-              <h2 className="mt-4 text-2xl font-medium">優先(急ぎ)対応</h2>
+              <h2 className="mt-4 text-2xl font-medium">優先対応</h2>
               <div className="flex items-center gap-4">
                 <label
                   className="mt-2 font-medium flex gap-1"
