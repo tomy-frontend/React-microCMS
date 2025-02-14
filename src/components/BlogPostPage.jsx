@@ -36,7 +36,7 @@ const BlogPostPage = () => {
       </div>
     );
   if (error) return <div>{error}</div>;
-  if (!post) return <div>投稿はありません。</div>;
+  if (!post) return <div>まだ投稿はありません。</div>;
 
   return (
     <>
