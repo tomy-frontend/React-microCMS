@@ -34,11 +34,11 @@ const About = () => {
 
     // contactFormsの数 * 金額
     calculatedTotal += contactForms * 10000;
-    calculatedHours += contactForms * 3; // 1フォームあたり3時間
+    calculatedHours += contactForms * 2; // 1フォームあたり2時間
 
-    // もしisPriorityにチェックが入っていればcalculateTotalに20000プラスする
+    // もしisPriorityにチェックが入っていればcalculateTotalに+10%
     if (isPriority) {
-      calculatedTotal += 20000;
+      calculatedTotal += calculatedTotal * 0.1;
       // 優先対応の場合は作業時間が20%短縮
       calculatedHours = Math.ceil(calculatedHours * 0.8);
     }
@@ -141,7 +141,7 @@ const About = () => {
                   }
                 />
               </div>
-              <h2 className="mt-4 text-2xl font-medium">優先対応</h2>
+              <h2 className="mt-4 text-2xl font-medium">優先対応(+10%)</h2>
               <div className="flex items-center gap-4">
                 <label
                   className="mt-2 font-medium flex gap-1"
