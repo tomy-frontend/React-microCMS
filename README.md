@@ -7,14 +7,22 @@ React をベース microCMS を導入したブログサイトです。
 
 # 使用技術
 
-- React
+- React18
 - CMS
-
   - microCMS
 
 - CSS
-
   - tailwindCSS
 
 - ホスティングサーバー
   - Vercel
+
+# プロジェクトの立ち上げ
+```
+npm run dev
+```
+
+# プロジェクトのビルド
+```
+npm run build
+```
