@@ -59,11 +59,19 @@ const About = () => {
     <>
       <Header />
       <main>
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 max-w-4xl">
           <h1 className="pt-4 font-bold text-xl md:text-3xl">
             ざっくりお見積もり金額シュミレーター
           </h1>
-          <div className="mt-6 md:flex mx-auto max-w-4xl">
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200 shadow-sm">
+            <p className="text-gray-700 mb-2">
+              設定を選択するだけで、プロジェクトに必要な時間と費用を簡単に見積もることができます。
+            </p>
+            <p className="text-gray-600 text-sm">
+              ※実際の費用は、詳細な要件によって変動する場合があります。正確な見積もりについてはお問い合わせください。
+            </p>
+          </div>{" "}
+          <div className="mt-8 md:flex mx-auto max-w-4xl">
             <div className="md:w-3/6  bg-gray-200 px-3 py-4 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg">
               <h2 className="text-2xl font-medium">制作種類</h2>
               <div className="mt-2 flex items-center gap-4">

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
-const contact = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -52,7 +52,6 @@ const contact = () => {
                 className="mt-1 bg-gray-200 rounded-lg p-2 w-full"
                 id="name"
                 type="text"
-                name="name"
               />
               {errors.name && (
                 <span className="mt-1 text-red-500 text-sm">
@@ -137,9 +136,8 @@ const contact = () => {
               </label>
               <textarea
                 {...register("textarea")}
-                aria-invalid={errors.message ? "true" : "false"}
+                aria-invalid={errors.textarea ? "true" : "false"}
                 className="mt-1 bg-gray-200 rounded-lg p-2 w-full"
-                name="textarea"
                 id="textarea"
                 rows="5"
               ></textarea>
@@ -159,4 +157,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
