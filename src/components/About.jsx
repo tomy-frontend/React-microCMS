@@ -21,7 +21,6 @@ const About = () => {
       calculatedTotal += 70000;
       calculatedHours += 32; // LP制作の基本時間
     } else if (projectType === "multiPage") {
-      // pageCount等の数 * 金額の計算
       calculatedTotal += 100000;
       calculatedHours += 40;
 
