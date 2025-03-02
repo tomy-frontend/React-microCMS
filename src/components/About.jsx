@@ -69,7 +69,7 @@ const About = () => {
             <p className="text-gray-600 text-sm">
               ※実際の費用は、詳細な要件によって変動する場合があります。正確な見積もりについてはお問い合わせください。
             </p>
-          </div>{" "}
+          </div>
           <div className="mt-8 md:flex mx-auto max-w-4xl">
             <div className="md:w-3/6  bg-gray-200 px-3 py-4 rounded-tl-lg rounded-tr-lg md:rounded-tr-none md:rounded-bl-lg">
               <h2 className="text-2xl font-medium">制作種類</h2>
