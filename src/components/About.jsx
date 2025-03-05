@@ -50,8 +50,6 @@ const About = () => {
 
   useEffect(() => {
     calculateTotal();
-
-    // calculateTotalが更新されるたびに、calculateTotal関数がuseEffectによって呼び出される
   }, [calculateTotal]);
 
   return (
