@@ -33,7 +33,7 @@ function Footer() {
           </ul>
         </nav>
         <small className="mt-4 inline-block">
-          @2024tomy_dev all rights reserved
+          @2025tomy_dev all rights reserved
         </small>
       </footer>
     </>

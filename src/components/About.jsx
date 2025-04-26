@@ -62,7 +62,7 @@ const About = () => {
           </h1>
           <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200 shadow-sm">
             <p className="text-gray-700 mb-2">
-              設定を選択するだけで、プロジェクトに必要な時間と費用を簡単にお見積もり(ざっくり)することができます。
+              設定を選択するだけで、プロジェクトに必要な時間と費用をお見積もり(ざっくり)することができます。
             </p>
             <p className="text-gray-600 text-sm">
               ※実際の費用は、詳細な要件によって変動する場合があります。正確な見積もりについてはお問い合わせください。
