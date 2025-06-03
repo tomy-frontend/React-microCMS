@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="w-full text-gray-700 border-b border-gray-500 flex flex-col items-center justify-between mx-auto px-4 py-4 md:flex-row">
+    <header className="w-full text-gray-700 border-b border-gray-400 flex flex-col items-center justify-between mx-auto px-4 py-4 md:flex-row">
       <h1 className="text-4xl font-bold">
         <Link to="/" className="text-gray-700 hover:text-blue-600 duration-300">
           MyBlog
