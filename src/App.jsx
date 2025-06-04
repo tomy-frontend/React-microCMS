@@ -50,7 +50,7 @@ function App() {
                             <img
                               className="w-full h-full object-cover duration-300 group-hover:scale-105"
                               src={post.eyecatch.url}
-                              alt="ブログサムネイル"
+                              alt="blogアイキャッチ画像"
                               width="600"
                               height="600"
                               loading="lazy"
