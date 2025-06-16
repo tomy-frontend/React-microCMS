@@ -18,16 +18,16 @@ const About = () => {
     let calculatedHours = 0;
 
     if (projectType === "LP") {
-      calculatedTotal += 70000;
+      calculatedTotal += 70000; // LP制作の基本金額
       calculatedHours += 32; // LP制作の基本時間
     } else if (projectType === "multiPage") {
-      calculatedTotal += 100000;
-      calculatedHours += 40;
+      calculatedTotal += 100000; // 複数ページサイトの基本金額
+      calculatedHours += 40; // 複数ページサイトの基本時間
 
-      calculatedTotal += pageCount * 20000;
+      calculatedTotal += pageCount * 20000; // ページ数 * 1ページあたりの金額
       calculatedHours += pageCount * 6; // 1ページあたり6時間
 
-      calculatedTotal += cmsCount * 10000;
+      calculatedTotal += cmsCount * 5000; // CMS機能数 * 1CMS機能あたりの金額
       calculatedHours += cmsCount * 2; // 1CMS機能あたり2時間
     }
 
@@ -84,7 +84,7 @@ const About = () => {
                     checked={projectType === "LP"}
                     onChange={(e) => setProjectType(e.target.value)}
                   />
-                  LP(70,000円)
+                  LP(基本料金70,000円)
                 </label>
                 <label
                   className="font-medium flex items-center gap-1"
@@ -98,7 +98,7 @@ const About = () => {
                     checked={projectType === "multiPage"}
                     onChange={(e) => setProjectType(e.target.value)}
                   />
-                  複数ページサイトの構築(100,000円)
+                  複数ページサイトの構築(基本料金100,000円)
                 </label>
               </div>
 
@@ -163,11 +163,12 @@ const About = () => {
                 </label>
               </div>
             </div>
-            <div className="grid place-content-center bg-gray-100 md:flex-1 py-6 rounded-bl-lg rounded-br-lg md:rounded-bl-none md:rounded-tr-lg">
+            <div className="grid place-content-center gap-1 bg-gray-100 md:flex-1 py-6 rounded-bl-lg rounded-br-lg md:rounded-bl-none md:rounded-tr-lg">
               <p className="text-3xl font-medium text-center">
                 合計時間：約{Math.round(totalHours)}時間
               </p>
-              <p className="text-xl font-medium text-center">
+
+              <p className=" text-xl font-medium text-center">
                 {workHoursPerDay ? (
                   <>
                     <span className="text-2xl">
@@ -195,8 +196,9 @@ const About = () => {
                 </span>
               </p>
 
-              <p className="mt-3 text-3xl font-medium text-center">
+              <p className=" text-3xl font-medium text-center">
                 合計金額：{total.toLocaleString()}円
+                <span className="text-base">(税込)</span>
               </p>
             </div>
           </div>
