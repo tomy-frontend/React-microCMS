@@ -13,8 +13,6 @@ function App() {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       const apiResponse = await client.getList({ endpoint: "blogs" });
-
-      // setBlogPostsを更新するための関数、apiResponseで取得したブログの内容を更新する。contentsはmicroCMSで用意されたデータの配列
       setBlogPosts(apiResponse.contents);
     };
 

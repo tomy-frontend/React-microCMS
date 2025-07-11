@@ -11,7 +11,7 @@ function Footer() {
                 to="/about"
                 className="font-medium text-gray-700 hover:text-blue-600 duration-300"
               >
-                ABOUT Me
+                ABOUT
               </Link>
             </li>
             <li>
