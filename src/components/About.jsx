@@ -48,6 +48,7 @@ const About = () => {
     // useCallbackの発火タイミングは、projectType...等の関数が更新されたとき
   }, [projectType, pageCount, cmsCount, contactForms, isPriority]);
 
+  // マウント時にcalculateTotalを実行
   useEffect(() => {
     calculateTotal();
   }, [calculateTotal]);
