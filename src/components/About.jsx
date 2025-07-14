@@ -103,7 +103,6 @@ const About = () => {
                 </label>
               </div>
 
-              {/* 条件付きレンダリング、projectTypeが"multiPage"と一致している場合のみ下記表示する */}
               {projectType === "multiPage" && (
                 <>
                   <h2 className="mt-4 text-2xl font-medium">下層ページ数</h2>
