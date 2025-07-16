@@ -99,7 +99,7 @@ const About = () => {
                     checked={projectType === "multiPage"}
                     onChange={(e) => setProjectType(e.target.value)}
                   />
-                  複数ページサイトの構築(基本料金110,000円)
+                  複数ページサイトの構築(基本料金100,000円)
                 </label>
               </div>
 
