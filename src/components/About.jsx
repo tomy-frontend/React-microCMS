@@ -21,7 +21,7 @@ const About = () => {
       calculatedTotal += 70000; // LP制作の基本金額
       calculatedHours += 32; // LP制作の基本時間
     } else if (projectType === "multiPage") {
-      calculatedTotal += 100000; // 複数ページサイトの基本金額
+      calculatedTotal += 110000; // 複数ページサイトの基本金額
       calculatedHours += 40; // 複数ページサイトの基本時間
 
       calculatedTotal += pageCount * 20000; // ページ数 * 1ページあたりの金額
@@ -99,7 +99,7 @@ const About = () => {
                     checked={projectType === "multiPage"}
                     onChange={(e) => setProjectType(e.target.value)}
                   />
-                  複数ページサイトの構築(基本料金100,000円)
+                  複数ページサイトの構築(基本料金110,000円)
                 </label>
               </div>
 
