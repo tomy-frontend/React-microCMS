@@ -42,10 +42,8 @@ const About = () => {
       calculatedHours = Math.ceil(calculatedHours * 0.8);
     }
 
-    // setTotalとsetTotalHoursの値を更新する処理
     setTotal(calculatedTotal);
     setTotalHours(calculatedHours);
-    // useCallbackの発火タイミングは、projectType...等の関数が更新されたとき
   }, [projectType, pageCount, cmsCount, contactForms, isPriority]);
 
   // マウント時にcalculateTotalを実行
