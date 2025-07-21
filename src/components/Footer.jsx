@@ -11,7 +11,7 @@ function Footer() {
                 to="/about"
                 className="font-medium text-gray-700 hover:text-blue-600 duration-300"
               >
-                ABOUT
+                ABOUT ME
               </Link>
             </li>
             <li>
@@ -27,7 +27,7 @@ function Footer() {
                 to="/contact"
                 className="font-medium text-gray-700 hover:text-blue-600 duration-300"
               >
-                CONTACT
+                CONTACT ME
               </Link>
             </li>
           </ul>
